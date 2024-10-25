@@ -6,6 +6,17 @@ public class Main {
 		
 		// TODO
 		
+        GPSPoint gpsPoint = new GPSPoint(1, 2.0, 3.0, 5.0);
+
+      
+        System.out.println("TimeStamp: " + gpsPoint.getTime());
+
+        
+        gpsPoint.setTime(2);
+
+      
+        System.out.println(gpsPoint.toString());
+		
 	}
 
 }

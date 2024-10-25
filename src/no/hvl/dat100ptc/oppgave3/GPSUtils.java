@@ -1,7 +1,5 @@
 package no.hvl.dat100ptc.oppgave3;
 
-import static java.lang.Math.*;
-
 import no.hvl.dat100ptc.oppgave1.GPSPoint;
 import no.hvl.dat100ptc.TODO;
 
@@ -24,18 +22,26 @@ public class GPSUtils {
 
 	public static double findMin(double[] da) {
 
-		double min;
-
-		// TODO 
-		throw new UnsupportedOperationException(TODO.method());
+		double min = da[0];
+		
+		for(double d: da) {
+			if(d < min) {
+				min = d;
+			}
+		}
+	return min;
 		
 	}
 
 	public static double[] getLatitudes(GPSPoint[] gpspoints) {
 
-		throw new UnsupportedOperationException(TODO.method());
+		double[] latitude = new double[gpspoints.length];
 		
-		// TODO
+		for(int i =0; i < gpspoints.length; i++) {
+			latitude[i] = gpspoints[i].getLatitude();
+		}
+		
+		return latitude;
 	}
 
 	public static double[] getLongitudes(GPSPoint[] gpspoints) {
